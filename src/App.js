@@ -1,24 +1,33 @@
-import './css/App.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import './css/App.scss';
+import {routes} from './global/configs/routes';
 import { Header, Footer} from './pages';
 
 
-function ButtonCimponent(props) {
-    const {name, cutomClassName} = props;
-  return (
-    <button className={cutomClassName}>{name}</button>
-  )
-}
+
 
 function App() {
+/*
+    <ButtonCimponent name='Danela' cutomClassName ='red'/>
+        <ButtonCimponent name='Zuka' cutomClassName ='black'/>
+        */
 
   return (
-      <>
 
-          <Header/>
-     <ButtonCimponent name='Danela' cutomClassName ='red'/>
-     <ButtonCimponent name='Zuka' cutomClassName ='black'/>
-          <Footer/>
-      </>
+    <BrowserRouter>
+        <Header/>
+        <Routes>
+
+      {routes.map((route, index) =>(
+          <Route
+              key={`routes-path-${index}`}
+              path={route.path}
+              element={route.element}
+          />
+        ))}
+       </Routes>
+        <Footer/>
+</BrowserRouter>
   )
 }
 
@@ -30,5 +39,6 @@ function App() {
 
 // TODO const TestComponent = () => {}
 //  export default TestComponent იგივეა
+// TODO react არის single site aplication
 
 
