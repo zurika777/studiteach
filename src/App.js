@@ -1,4 +1,5 @@
 import './css/App.css';
+import { Header, Footer} from './pages';
 
 
 function ButtonCimponent(props) {
@@ -11,10 +12,13 @@ function ButtonCimponent(props) {
 function App() {
 
   return (
-      <div className='wrapper'>
-     <ButtonCimponent name='Me' cutomClassName ='red'/>
+      <>
+
+          <Header/>
+     <ButtonCimponent name='Danela' cutomClassName ='red'/>
      <ButtonCimponent name='Zuka' cutomClassName ='black'/>
-      </div>
+          <Footer/>
+      </>
   )
 }
 
