@@ -1,9 +1,15 @@
-import { Navigation } from '../../global';
-export function Header() {
+import {Navigation} from '../../global';
+import {Logo} from '../../global/components/Logo'
+export  function Header() {
     return (
         <header>
-            <h1>My App</h1>
+            <div className="hed-nav">
+
+        <Logo/>
+
             <Navigation customClass="headerNav"/>
+            </div>
         </header>
+
     );
 }

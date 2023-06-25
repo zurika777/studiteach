@@ -1,29 +1,27 @@
 .footerNav {
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 20px;
-    height: 60px;
-    background-color: #fff;
-    list-style: none;
-    opacity: 0.8;
-  }
-  a {
-    text-decoration: none;
-    &:hover {
-      color: red;
-      text-decoration: underline;
-      opacity: 1;
+       ul{
+         display: flex;
+         justify-content: space-between;
+        }
+    li{
+      list-style: none;
+      a{
+        color: darkorange;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
+        &:hover {
+          text-decoration: underline;
+          color: #ff1c13;
+        }
+        &.active {
+          text-decoration: underline;
+          color: #ff1c13;
+        }
+
+      }
     }
-    &.active {
-      color: red;
-      text-decoration: underline;
-      opacity: 1;
-    }
-  }
 
-
-}
-
+     }

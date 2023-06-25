@@ -1,27 +1,33 @@
 .headerNav {
-  ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    height: 60px;
-    background-color: #fff;
+  height: 60px;
+  padding: 0 20px;
+  align-items: center;
+  margin-bottom: 50px;
+    ul{
+      display: flex;
+      justify-content: space-between;
+    }
+  li{
     list-style: none;
-    opacity: 0.8;
-  }
-  a {
-    text-decoration: none;
-    &:hover {
-      color: red;
-      text-decoration: underline;
-      opacity: 1;
+    margin-left: 20px;
+    a {
+      color: gray;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+      &:hover {
+        color: #2b2b2b;
+        text-decoration: underline;
+      }
+      &.active {
+        color: #2b2b2b;
+        text-decoration: underline;
+      }
     }
-    &.active {
-      color: red;
-      text-decoration: underline;
-      opacity: 1;
-    }
   }
-
 }
-
+.hed-nav {
+  display: flex;
+  justify-content: space-between;
+}
